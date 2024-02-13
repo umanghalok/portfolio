@@ -45,16 +45,32 @@ const Project = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div
       name="project"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen project"
+      className="bg-gradient-to-b from-black to-blue-800 w-full text-white md:h-screen project"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold inline border-b-4 border-pink-500">
             Project
           </p>
           <p className="py-6">Check out some of my works!</p>
@@ -63,18 +79,18 @@ const Project = () => {
         <Slider {...settings}>
           {AllProjects.map(({ id, src, name, link, repo }) => (
             <div key={id} className="slick-slide p-4">
-              <div className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105">
+              <div className="shadow-md shadow-white rounded-lg duration-150 hover:scale-105 hover:shadow-black">
                 <div className=" flex justify-center px-6 py-3 m-4">{name}</div>
                 <img
                   src={src}
                   alt="projects"
-                  className="rounded-md"
+                  className="rounded-md w-full" // Adjusted width
                 />
                 <div className="flex items-center justify-center">
-                  <button className="w-1/2 px-6 py-3 m-4" onClick={() => window.open(link, '_blank')}>
+                  <button className="w-full md:w-1/2 px-6 py-3 m-4" onClick={() => window.open(link, '_blank')}>
                     Live
                   </button>
-                  <button className="w-1/2 px-6 py-3 m-4" onClick={() => window.open(repo, '_blank')}>
+                  <button className="w-full md:w-1/2 px-6 py-3 m-4" onClick={() => window.open(repo, '_blank')}>
                     Code
                   </button>
                 </div>

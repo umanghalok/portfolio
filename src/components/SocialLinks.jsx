@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import resume from "../assets/resume.pdf"
@@ -42,11 +42,20 @@ const SocialLinks = () => {
       ),
       href: resume,
       download: true,
-    }
+    },
+    {
+      id: 5,
+      child: (
+        <>
+          Instagram <FaInstagram size={30} />
+        </>
+      ),
+      href: "https://www.instagram.com/_umangh_/",
+    },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className="top-[8%] flex flex:column lg:top-[35%] left-0 fixed">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li

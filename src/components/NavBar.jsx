@@ -29,18 +29,18 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-blue-500 fixed nav">
+    <div className="flex justify-between items-center w-full h-10 px-4 py-8 text-white fixed nav">
       <div>
-        <h1 className=" font-bold text-3xl font-signature ml-2"><a className="link-underline link-underline-black" href="https://umanghalok.netlify.app" target="_blank" rel="noreferrer">Umangh Alok</a></h1>
+        <h1 className=" font-bold text-4xl font-signature ml-2"><a className="link-underline link-underline-black" href="https://umanghalok.netlify.app" target="_blank" rel="noreferrer">Umangh Alok</a></h1>
       </div>
 
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium  text-white hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium  text-white hover:scale-105 duration-200 link-underline"
           >
-            <Link to={link} smooth duration={300}>
+            <Link to={link} smooth duration={500}>
               {link}
             </Link>
           </li>
