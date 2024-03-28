@@ -5,33 +5,42 @@ import "slick-carousel/slick/slick-theme.css";
 import passgen from "../assets/projects/passgen.png";
 import snake from "../assets/projects/snake.png";
 import weather from "../assets/projects/weather.png";
+import todo from "../assets/projects/todo.png";
 import tictactoe from "../assets/projects/tictactoe.png";
 
 const Project = () => {
   const AllProjects = [
     {
       id: 1,
+      src: todo,
+      name: "Todo Application",
+      link: "https://umanghtodoapp.netlify.app/",
+      repo: "https://github.com/umanghalok/Todo_Backend",
+    },
+
+    {
+      id: 2,
       src: passgen,
       name: "Password Generator",
       link: "https://umanghpasswordgenerator.netlify.app/",
       repo: "https://github.com/umanghalok/passwordGenerator",
     },
     {
-      id: 2,
+      id: 3,
       src: weather,
       name: "Weather App",
       link: "https://umangh-live-weather.netlify.app/",
       repo: "https://github.com/umanghalok/live-weather",
     },
     {
-      id: 3,
+      id: 4,
       src: snake,
       name: "Snake Game",
       link: "https://umangh-snake-game.netlify.app/",
       repo: "https://github.com/umanghalok/Snake-Game",
     },
     {
-      id: 4,
+      id: 5,
       src: tictactoe,
       name: "Tic Tac Toe Game",
       link: "https://umangh-tic-tac-toe.netlify.app/",
